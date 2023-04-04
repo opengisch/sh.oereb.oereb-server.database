@@ -2,7 +2,7 @@ name: Build and push docker image
 
 on:
   push:
-    branch:
+    branches:
       - master
   workflow_dispatch:
 
@@ -19,10 +19,7 @@ jobs:
     env:
       CONTAINERNAME: database
       SCHEMA: live
-      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-      PG_READ_PWD: ${{ secrets.PG_READ_PWD }}
-      PG_WRITE_PWD: ${{ secrets.PG_WRITE_PWD }}
+      POSTGRES_DB: oereb
       PG_GRETL_PWD: ${{ secrets.PG_GRETL_PWD }}
       ILI2PG_VERSION: 4.9.1
 
