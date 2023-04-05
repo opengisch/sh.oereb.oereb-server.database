@@ -8,7 +8,8 @@ on:
   schedule:
     # this is in UTC so it means every day at 4 AM this trigger is pulled
     - cron: 0 3 * * *
-
+  repository_dispatch:
+    types: [base_image_was_updated]
 
 jobs:
 
